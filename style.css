@@ -1,0 +1,59 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #333;
+}
+
+.luffy {
+  margin: 50px auto 0;
+  width: 474px;
+  position: relative;
+}
+
+.luffy .stroke {
+  stroke: #999;
+  fill: none;
+  position: absolute;
+  stroke-width: 1;
+  stroke-dasharray: 11000;
+  stroke-dashoffset: 11000;
+  animation: luffyStroke 15s linear forwards;
+}
+
+.luffy p {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.luffy p path {
+  stroke: none;
+  fill: #000;
+  animation: luffyFill 5s 13s 1 forwards;
+  opacity: 0;
+}
+
+@keyframes luffyStroke {
+  0% {
+    stroke-dashoffset: 11000;
+  }
+  80% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    opacity: 0;
+  }
+}
+@keyframes luffyFill {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
